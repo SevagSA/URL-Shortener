@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Enter a url to get a code</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <br>
+        <input type="submit" value="Generate ShortURL">
+    </form>
+
+    <a href="{% url 'shortener:go' %}">Have a shortcode? Access its URL here</a>
+
+</body>
+</html>
